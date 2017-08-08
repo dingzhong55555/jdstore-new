@@ -5,5 +5,12 @@
   <%= f.input :description %>
   <%= f.input :price %>
   <%= f.input :quantity %>
+  <% if @product.image.present? %>
+  <span>Present Image</span>
+  <%= image_tag( @product.image.thumb.url, class: "thumbnail" ) %>
+  <% else %>
+  <p>No Image</p>
+  <% end %>
+  <%= f.input :image %>
   <%= f.submit "Submit", data: { disable_with: "Submiting..."} %>
 <% end %>
