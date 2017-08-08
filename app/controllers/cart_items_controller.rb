@@ -7,7 +7,7 @@ class CartItemsController < ApplicationController
       redirect_to :back
       flash[:notice] = "#{@product.title}已删除"
     end
-  endd
+  end
 
   def update
     @cart_item = current_cart.cart_items.find_by(product_id: params["id"])
@@ -18,10 +18,11 @@ class CartItemsController < ApplicationController
       flash[:warning] = "数量不足以加入购物车"
     end
 
-    redirect_to :backd
+    redirect_to :back
   end
 
   private
+
   def cart_item_params
     params.require(:cart_item).permit(:quantity)
   end
