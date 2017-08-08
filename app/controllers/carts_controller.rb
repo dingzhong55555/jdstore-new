@@ -10,6 +10,9 @@ class CartsController < ApplicationController
     redirect_to :back
   end
 
-  
+  def checkout
+    @cart_items = current_cart.cart_items
+    @order = Order.new
+  end
 
 end
