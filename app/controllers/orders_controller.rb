@@ -46,6 +46,14 @@ class OrdersController < ApplicationController
     flash[:warning] = "微信付款成功!"
   end
 
+  def apply_to_cancel
+    @order = Order.find_by_token(params[:id])
+    @order.order_cancelled !
+    OrderMailer.apply_to_cancel_order(@order).deliver!
+    redirect_to :back
+    flash[:warning] = "已申请取消订单!"
+  end
+
   private
 
     def order_params

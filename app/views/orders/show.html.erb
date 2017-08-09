@@ -40,6 +40,9 @@
   </tbody>
 </table>
 
+<%= link_to("取消订单", apply_to_cancel_order_path(@order.token), method: :post, class: "btn btn-info btn-lg pull-left") %>
+
+
 <div class="payment pull-right">
   <% if !@order.is_paid? %>
     <%= link_to("支付宝支付", pay_with_alipay_order_path(@order.token), method: :post, class: "btn btn-danger btn-lg") %>

@@ -8,30 +8,30 @@ class Admin::OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.find_by_token(params[:id])
+    @order = Order.find(params[:id])
     @product_lists = @order.product_lists
   end
 
   def ship
-    @order = Order.find_by_token(params[:id])
+    @order = Order.find(params[:id])
     @order.ship!
     redirect_to :back
   end
 
   def shipped
-    @order = Order.find_by_token(params[:id])
+    @order = Order.find(params[:id])
     @order.deliver!
     redirect_to :back
   end
 
   def cancel
-    @order = Order.find_by_token(params[:id])
+    @order = Order.find(params[:id])
     @order.order_cancelled!
     redirect_to :back
   end
 
   def return
-    @order = Order.find_by_token(params[:id])
+    @order = Order.find(params[:id])
     @order.return_good!
     redirect_to :back
   end
