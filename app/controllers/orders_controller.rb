@@ -15,10 +15,14 @@ class OrdersController < ApplicationController
         product_list.quantity = cart_item.quantity
         product_list.save
       end
+      current_cart.clean!
+      OrderMailer.notify_order_placed(@order).deliver!
+      
       redirect_to order_path(@order.token)
     else
       redirect_to 'carts/checkout'
     end
+
   end
 
   def show
@@ -28,20 +32,17 @@ class OrdersController < ApplicationController
 
   def pay_with_alipay
     @order = Order.find_by_token(params[:id])
-    @order.paid!
     @order.set_payment_with!("alipay")
-
+    @order.paid!
     redirect_to :back
-    current_cart.clean!
     flash[:warning] = "支付宝付款成功！"
   end
 
   def pay_with_wechat
     @order = Order.find_by_token(params[:id])
-    @order.paid!
     @order.set_payment_with!("wechat")
+    @order.paid!
     redirect_to :back
-    current_cart.clean!
     flash[:warning] = "微信付款成功！"
   end
 
