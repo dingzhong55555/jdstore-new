@@ -45,12 +45,7 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
-  def require_is_admin
-    if !current_user.admin?
-      redirect_to "/"
-      flash[:warning] = "You are not admin!"
-    end
-  end
+  
 
   private
   def product_params

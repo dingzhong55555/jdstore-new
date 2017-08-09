@@ -1,13 +1,41 @@
 class Admin::OrdersController < ApplicationController
   before_action :authenticate_user!
-  before_action :admin_required
+  before_action :require_is_admin
   layout 'admin'
 
   def index
     @orders = Order.order("id DESC")
   end
+
   def show
     @order = Order.find_by_token(params[:id])
     @product_lists = @order.product_lists
   end
+
+  def ship
+    @order = Order.find_by_token(params[:id])
+    @order.ship!
+    redirect_to :back
+  end
+
+  def shipped
+    @order = Order.find_by_token(params[:id])
+    @order.deliver!
+    redirect_to :back
+  end
+
+  def cancel
+    @order = Order.find_by_token(params[:id])
+    @order.order_cancelled!
+    redirect_to :back
+  end
+
+  def return
+    @order = Order.find_by_token(params[:id])
+    @order.return_good!
+    redirect_to :back
+  end
+
+
+
 end
