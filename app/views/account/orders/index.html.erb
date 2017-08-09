@@ -1,0 +1,19 @@
+<h3>订单明细</h3>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>订单客户</th>
+      <th>订单时间</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+    <tr>
+      <td><%= link_to( order.id, order_path(order) ) %></td>
+      <td><%= order.user.email%></td>
+      <td><%= order.created_at %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
