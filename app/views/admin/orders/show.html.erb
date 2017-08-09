@@ -1,0 +1,42 @@
+<h3>订单明细(<%= render_order_paid_state(@order) %>)</h3>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>商品名称</th>
+      <th>商品价格</th>
+      <th>商品数量</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @product_lists.each do |product_list|  %>
+    <tr>
+      <td><%= product_list.product_name %></td>
+      <td><%= product_list.product_price %></td>
+      <td><%= product_list.quantity %></td>
+    </tr>
+    <% end  %>
+  </tbody>
+</table>
+<p class="pull-right">总价<%= @order.total %>RMB</p>
+<br>
+<hr>
+
+<h3>寄送资讯</h3>
+
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td>订购人</td>
+    </tr>
+    <tr>
+      <td><%= @order.billing_name %>-<%= @order.billing_address %></td>
+    </tr>
+    <tr>
+      <td>收货人</td>
+    </tr>
+    <tr>
+      <td><%= @order.shipping_name %>-<%= @order.shipping_address %></td>
+    </tr>
+  </tbody>
+</table>

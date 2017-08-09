@@ -33,4 +33,8 @@ Rails.application.routes.draw do
     resources :orders
   end
 
+  namespace :admin do
+    resources :orders
+  end
+
 end

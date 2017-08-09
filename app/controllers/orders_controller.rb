@@ -43,7 +43,7 @@ class OrdersController < ApplicationController
     @order.set_payment_with!("wechat")
     @order.make_payment!
     redirect_to :back
-    flash[:warning] = "微信付款成功！"
+    flash[:warning] = "微信付款成功!"
   end
 
   private
