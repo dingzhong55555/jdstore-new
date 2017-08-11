@@ -48,8 +48,7 @@ html, body {
 
 //------------------------ Header Style ------------------------//
 #top-header {
-  background: lightgray;
-  padding: 1em 0 2em 0;
+  padding: 1em 1em 1em 1em;
   .header-wrapper {
     width: 100%;
     margin:0 auto;
@@ -102,6 +101,9 @@ html, body {
     li {
       display: inline-block;
       padding: 0 2em;
+      a {
+        color: $main;
+      }
     }
   }
 
