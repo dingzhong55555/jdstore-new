@@ -17,3 +17,92 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
+
+//------------------------ Variable ------------------------//
+$main: #0D0D0D;
+$secondary: #555555;
+$white: #FFFFFF;
+$red: #E07277;
+
+//------------------------ Global Style ------------------------//
+html, body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.wrapper {
+  width: 1440px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+
+
+//------------------------ Header Style ------------------------//
+#top-header {
+  background: lightgray;
+  padding: 1em 0 2em 0;
+  .header-wrapper {
+    width: 100%;
+    margin:0 auto;
+  }
+  .nav-left, .nav-right {
+      a {
+        font-size: .5em;
+        text-decoration: none;
+        color: $secondary;
+        &:hover {
+          color: $main;
+        }
+      }
+      strong {
+        color:$main;
+        &:hover {
+          color: $secondary;
+        }
+      }
+  }
+  .nav-left {
+    display: inline;
+    a {
+      margin-right: 1.3em;
+    }
+  }
+
+  .nav-right {
+    display: inline;
+    float: right;
+    a {
+      margin-left: 1.3em;
+    }
+  }
+
+  .logo {
+    width: 70px;
+    margin: 0 auto;
+    padding: 2em 0;
+    img {
+      width: 100%;
+    }
+  }
+
+  .primary-menu {
+    list-style: none;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    li {
+      display: inline-block;
+      padding: 0 2em;
+    }
+  }
+
+}
