@@ -49,7 +49,7 @@ html, body {
 
 //------------------------ Header Style ------------------------//
 #top-header {
-  padding: 1em 1em 1em 1em;
+  padding: 1em 1em 2em 1em;
   .header-wrapper {
     width: 100%;
     margin:0 auto;
@@ -105,6 +105,7 @@ html, body {
       a {
         color: $main;
         font-weight: bolder;
+        font-size: 1.1em;
       }
     }
   }
@@ -197,5 +198,95 @@ html, body {
     width: 100%;
   }
 }
+}
 
+/*------------- deliver -------------*/
+#deliver-info {
+  background-color: #F3F3F3;
+  text-align: center;
+  padding:1em 0;
+  border-top: 1px solid $lightgray;
+  i {
+    font-size: 1.5em;
+  }
+}
+
+/*------------- deliver -------------*/
+#banner {
+  margin-top: 3em;
+  .banner-content {
+    background: #C7DCCB;
+    text-align: center;
+    padding: 1em 0;
+    color: $white;
+    .title {
+      margin:0;
+      margin-bottom: .5em;
+      font-size: 2em;
+      font-weight: 700;
+    }
+    .info {
+      font-size: .6em;
+      font-weight: 400;
+    }
+  }
+  .banner-links {
+    nav {
+      a{
+        text-decoration: underline;
+        margin: 0 .5em;
+        color: $white;
+        &:hover {
+          color: $main;
+        }
+      }
+    }
+  }
+}
+
+/*------------- first-children -------------*/
+#first-chilren {
+  margin-top: 1.5em;
+  .content {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    img {
+      display: block;
+      width: 100%;
+    }
+    .ad-content {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      margin-bottom: 3em;
+      .head-title {
+        color: $red;
+        font-size: 3em;
+        font-weight: 900;
+        margin-bottom: .6em;
+      }
+      .shop-button {
+        display: inline-block;
+        padding: .5em 1.2em;
+        background-color: $main;
+        color: $red;
+        text-decoration: none;
+        &:hover {
+          background-color: $secondary;
+        }
+      }
+    }
+    .price-info {
+      position: absolute;
+      top:50%;
+      left:80%;
+      .info {
+        font-size: 1.3em;
+        color: $white;
+      }
+    }
+  }
 }
