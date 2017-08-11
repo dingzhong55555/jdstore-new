@@ -23,6 +23,7 @@ $main: #0D0D0D;
 $secondary: #555555;
 $white: #FFFFFF;
 $red: #E07277;
+$lightgray: #C8C8C8;
 
 //------------------------ Global Style ------------------------//
 html, body {
@@ -103,8 +104,98 @@ html, body {
       padding: 0 2em;
       a {
         color: $main;
+        font-weight: bolder;
       }
     }
   }
+}
+
+
+//------------------------Footer Style ------------------------//
+#footer-menu {
+  background-color: $main;
+  padding: 3em 0;
+  color:$white;
+  .four-menu {
+    width: 100%;
+    nav {
+      width: 25%;
+      float:left;
+      display: block;
+      h4 {
+        font-size: .8em;
+        font-weight: bold;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+          a {
+            color: $lightgray;
+            text-decoration: none;
+            font-size: .5em;
+            &:hover {
+              color: $white;
+            }
+          }
+        }
+        #sign-up {
+          width: 100px;
+          border: none;
+          background-color: $white;
+          text-align: center;
+          padding: .8em 1.5em;
+          font-size: .8em;
+          font-weight: bold;
+          margin-top: 1em;
+          &:hover {
+            background-color: $lightgray;
+          }
+          a {
+            color: $main;
+          }
+        }
+      }
+    }
+  }
+
+  /*------------- share buuton -------------*/
+  .share-button {
+    padding: 3em 0;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+      li {
+        display: inline;
+        padding: 0 1em;
+        i {
+          font-size: 2em;
+          color: $white;
+          &:hover {
+            color: $lightgray;
+          }
+        }
+      }
+    }
+  }
+/*------------- Description -------------*/
+.description {
+  width: 100%;
+  max-width: 60%;
+  margin: 0 auto;
+  font-size: .5em;
+  text-align: center;
+}
+/*------------- Logo -------------*/
+.logo {
+  width: 70px;
+  margin: 0 auto;
+  padding: 2em 0;
+  margin-top: 1em;
+  img {
+    width: 100%;
+  }
+}
 
 }
