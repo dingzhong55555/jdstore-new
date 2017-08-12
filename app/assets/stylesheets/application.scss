@@ -45,11 +45,13 @@ html, body {
   margin: 0 auto;
 }
 
+/* button style */
 
 
 //------------------------ Header Style ------------------------//
 #top-header {
   padding: 1em 1em 2em 1em;
+  border-bottom: 2px solid $lightgray ;
   .header-wrapper {
     width: 100%;
     margin:0 auto;
@@ -207,17 +209,17 @@ html, body {
   padding:1em 0;
   border-top: 1px solid $lightgray;
   i {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
 
-/*------------- deliver -------------*/
+/*------------- banner -------------*/
 #banner {
   margin-top: 3em;
   .banner-content {
     background: #C7DCCB;
     text-align: center;
-    padding: 1em 0;
+    padding: 1.5em 0;
     color: $white;
     .title {
       margin:0;
@@ -286,6 +288,47 @@ html, body {
       .info {
         font-size: 1.3em;
         color: $white;
+      }
+    }
+  }
+}
+
+/*------------- collected-product -------------*/
+#collected-product {
+  margin-top: 1.5em;
+  .product-item {
+    width: 24%;
+    float: left;
+    margin-right: 1%;
+    .image-wrapper {
+      width: 100%;
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .favourite-icon {
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: .5em .5em .3em .5em;
+        border: 1px solid $lightgray;
+        border-radius: 90%;
+        background: $white;
+        i {
+          font-size: 1.3em;
+          color: $red;
+        }
+      }
+    }
+    .product-info {
+      text-align: center;
+      .shop-link {
+        color: $main;
+        font-size: 1em;
+        font-weight: bolder;
+        text-decoration: underline;
+        text-transform: uppercase;
       }
     }
   }

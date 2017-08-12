@@ -1,3 +1,4 @@
+<!--
 <div class="row">
   <div class="col-md-6">
     <% if @product.image.present? %>
@@ -23,7 +24,95 @@
           "商品已销售一空！"
         <% end %>
       </div>
-
-
   </div>
 </div>
+-->
+
+
+<!-- ************************* Ladies-Product-Show ************************* -->
+<section id="product-show" class="container-fluid">
+    <div class="wrapper row">
+      <div id="thumb-image" class="col-md-1">
+        <img src="http://lp2.hm.com/hmprod?set=source[/environment/2017/9AS_0107_002R.jpg],width[4112],height[4808],y[-1],type[FASHION_FRONT]&hmver=1&call=url[file:/product/thumb]" alt="no pic">
+        <img src="http://lp2.hm.com/hmprod?set=source[/environment/2017/9AS_0107_002R.jpg],width[4112],height[4808],y[-1],type[FASHION_FRONT]&hmver=1&call=url[file:/product/thumb]" alt="no pic">
+        <img src="http://lp2.hm.com/hmprod?set=source[/environment/2017/9AS_0107_002R.jpg],width[4112],height[4808],y[-1],type[FASHION_FRONT]&hmver=1&call=url[file:/product/thumb]" alt="no pic">
+        <img src="http://lp2.hm.com/hmprod?set=source[/environment/2017/9AS_0107_002R.jpg],width[4112],height[4808],y[-1],type[FASHION_FRONT]&hmver=1&call=url[file:/product/thumb]" alt="no pic">
+      </div>
+
+      <div id="details-image" class="col-md-5">
+        <img src="http://lp2.hm.com/hmprod?set=source[/model/2017/F00%200532098%20003%2055%200507.jpg],type[STILLLIFE_FRONT]&hmver=1&call=url[file:/product/main]" alt="">
+      </div>
+
+      <div id="product-info" class="col-md-6">
+        <div class="normal-info">
+          <h3 class="product-title">Dungaree dress</h3>
+          <h3 class="product-price">¥149.00</h3>
+        </div>
+
+        <div class="color commen">
+          <span>COLOUR:</span> Cerise
+          <ul>
+            <li><a href="#">C</a></li>
+            <li><a href="#">C</a></li>
+            <li><a href="#">C</a></li>
+          </ul>
+        </div>
+
+        <div class="size commen">
+          <span>SIZE:</span> 24 (150)
+          <ul>
+            <li><a href="#">24 (150)</a></li>
+            <li><a href="#">24 (150)</a></li>
+            <li><a href="#">24 (150)</a></li>
+            <li><a href="#">24 (150)</a></li>
+            <li><a href="#">24 (150)</a></li>
+            <li><a href="#">24 (150)</a></li>
+            <li><a href="#">24 (150)</a></li>
+            <li><a href="#">24 (150)</a></li>
+            <li><a href="#">24 (150)</a></li>
+            <li><a href="#">24 (150)</a></li>
+            <li><a href="#">24 (150)</a></li>
+            <li><a href="#">233 (150)</a></li>
+            <li><a href="#">24cm (150)</a></li>
+            <li><a href="#">24 (150)</a></li>
+            <li><a href="#">24 (150)</a></li>
+          </ul>
+          <a  href="#" class="size-guaid">SIZE GUIDE</a>
+        </div>
+
+        <div class="button-wrapper commen">
+          <ul>
+            <div>Delivers in: 1-7 working days</div>
+            <li class="add-button">
+              <i class="fa fa-shopping-bag"></i>
+              <%= link_to("add to shopping bag", add_to_cart_product_path(@product), method: :post ) %>
+            </li>
+            <li class="favourite-button">
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
+              <a href="#">save as favourite</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="more-info commen">
+          <div class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="table-item">DESCRIPTION</th>
+                <th class="table-item">DESCRIPTION</th>
+                <th class="table-item">DESCRIPTION</th>
+                <th class="table-item">DESCRIPTION</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <p>Dungaree dress in stretch cotton twill with metal press-studs at the top, and adjustable straps with metal buckles, and front and back pockets. Seam at the waist, straight-cut skirt, zip fly and raw-edge frayed hem</p>
+                </td>
+              </tr>
+            </tbody>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

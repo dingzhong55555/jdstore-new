@@ -1,3 +1,4 @@
+<!--
 <div class="row">
   <% @products.each do |product| %>
     <div class="col-xs-6 col-md-3">
@@ -12,3 +13,77 @@
     </div>
   <% end %>
 </div>
+-->
+
+<!-- ************************* Ladies Product ************************* -->
+
+<section id="ladies-product-index" class="clearfix container-fluid">
+  <div class="wrapper">
+    <!-- ************************* nav-list ************************* -->
+    <div id="nav-list" class="col-md-3">
+      <ul class="list-item">
+        <h3>NEW ARRIVALS</h3>
+        <li><a href="#">View All</a></li>
+        <li><a href="#">View All</a></li>
+        <li><a href="#">View All</a></li>
+      </ul>
+
+      <ul class="list-item">
+        <h3>NEW ARRIVALS</h3>
+        <li><a href="#">View All</a></li>
+        <li><a href="#">View All</a></li>
+        <li><a href="#">View All</a></li>
+        <li><a href="#">View All</a></li>
+        <li><a href="#">View All</a></li>
+        <li><a href="#">View All</a></li>
+        <li><a href="#">View All</a></li>
+      </ul>
+
+      <ul class="list-item">
+        <h3>NEW ARRIVALS</h3>
+        <li><a href="#">View All</a></li>
+        <li><a href="#">View All</a></li>
+        <li><a href="#">View All</a></li>
+        <li><a href="#">View All</a></li>
+      </ul>
+    </div>
+
+
+    <!-- ************************* product-index ************************* -->
+    <div id="product-index" class="col-md-9">
+      <div class="banner">
+        <img src="http://lp2.hm.com/hmprod?set=width[1200],quality[80],options[limit]&source=url[http://www2.hm.com/content/dam/Campaign%20Men%20S06/9JI/9JI-mens-hoodies-CPD.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]" alt="product">
+        <div class="banner-info">
+          <p class="description">THE MUST HAVE</p>
+          <h4 class="head-title">MEN'S HOODIES</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <% @products.each do |product| %>
+        <div class="product-item col-md-4">
+          <%= link_to product_path(product) do %>
+          <div class="image-wrapper">
+            <% if product.image.present? %>
+              <%= image_tag(product.image.thumb.url, class: "image") %>
+            <% else %>
+              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "image") %>
+            <% end %>
+              <a href="#" class="favourite-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+          </div>
+
+          <div class="product-info">
+            <span>
+              <%= product.title %>
+              <br>
+              <%= product.price %>
+            </span>
+          </div>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</section>
