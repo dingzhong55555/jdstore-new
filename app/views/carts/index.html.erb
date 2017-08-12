@@ -55,3 +55,46 @@
 <div class="checkout clearfix">
   <%= link_to("确认结账", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
 </div>
+
+<!-- ************************* Shopping-Bag ************************* -->
+<section id="shopping-bag" class="container-fluid clearfix">
+  <div class="row wrapper">
+    <h2 class="title">Shopping Bag</h2>
+    <div class="col-md-8 item-wrapper">
+      <div class="row item-info">
+        <div class="col-md-3 item-image">
+          <img src="http://lp2.hm.com/hmprod%3Fset%3Dsource%5B%2Fmodel%2F2017%2FF00+0527197+001+55+0719.jpg%5D%2Ctype%5BSTILLLIFE_FRONT%5D%26hmver%3D1%26call%3Durl%5Bfile%3A%2Fproduct%2Fcart%5D" alt="item-image">
+        </div>
+        <div class="col-md-9 item-detail">
+          <div  class="item-title">
+            <p>
+              Jersey leggings
+              <br>
+              ¥69.90
+            </p>
+            <span>item-total</span>
+          </div>
+
+
+          <dl class="item-list">
+            <dt>Art no:</dt>
+            <dd> 0480576010</dd>
+            <dt>Art no:</dt>
+            <dd> 0480576010</dd>
+            <dt>Art no:</dt>
+            <dd> 0480576010</dd>
+          </dl>
+
+          <div class="button-wrapper">
+            <button type="button" name="delete">delete</button>
+            <button type="button" name="fa">fa</button>
+            <button type="button" name="quantity">quantity</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 checkout-wrapper">
+      checkout-wrapper
+    </div>
+  </div>
+</section>

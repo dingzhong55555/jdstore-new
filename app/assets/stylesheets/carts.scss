@@ -1,3 +1,67 @@
 // Place all the styles related to the carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//------------------------ Variable ------------------------//
+$main: #0D0D0D;
+$secondary: #555555;
+$white: #FFFFFF;
+$red: #E07277;
+$lightgray: #C8C8C8;
+
+//------------------------ Global Style ------------------------//
+html, body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.wrapper {
+  width: 1440px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* button style */
+
+//------------------------ Style-With ------------------------//
+#shopping-bag {
+  h2 {
+    font-family: fantasy;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+  }
+  /* item-info */
+  .item-info {
+    background: green;
+  }
+  /* item-wrapper */
+  .item-wrapper {
+    background: lightblue;
+    border: 1px solid $lightgray;
+    padding: 1em;
+    img {
+      width: 100%;
+    }
+    .item-image{
+      background: lightgray;
+    }
+    .item-detail{
+    }
+    .item-total{
+      background:lightgreen;
+    }
+  }
+  /* checkout-wrapper */
+  .checkout-wrapper {
+    background: lightgray;
+  }
+}

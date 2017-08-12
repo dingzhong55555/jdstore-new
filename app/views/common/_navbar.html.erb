@@ -61,7 +61,9 @@
         <a href="#">My H&amp;M </a>
         <a href="#">Sign in to continue</a>
         <a href="#"><strong><i class="fa fa-heart"></i>  Favourites</strong></a>
-        <a href="#"><strong><i class="fa fa-shopping-bag"></i>  Shoppingbag(0)</strong></a>
+        <%= link_to carts_path do %>
+        <strong><i class="fa fa-shopping-bag"></i>  Shoppingbag(<%= current_cart.products.count %>)</strong>
+        <% end %>
       </nav>
     </div>
 

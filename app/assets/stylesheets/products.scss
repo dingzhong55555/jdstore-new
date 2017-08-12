@@ -208,8 +208,9 @@ html, body {
         li {
           display: inline-block;
           padding:.5em 1.2em;
-          background: $white;
+          background: $main;
           border: 3px solid $main;
+          color:$white;
           margin-top: .3em;
           &:hover {
             background: $lightgray;
@@ -217,11 +218,71 @@ html, body {
           a {
             text-transform: uppercase;
             text-decoration: none;
-            color:$main;
+            color:$white;
             font-weight: 900;
           }
         }
       }
+    }
+    .more-info {
+      width: 100%;
+      .links {
+        list-style-type: none;
+        margin: 0;
+        padding: .5em 1em;
+        border: 1px solid $lightgray;
+        li {
+          display: inline-block;
+          margin-right: 1em;
+          a {
+            text-decoration: none;
+            color: $lightgray;
+            font-size: .8em;
+            &:hover {
+              color: $main;
+            }
+          }
+          .current {
+            color: $main;
+          }
+        }
+      }
+      .info-details {
+        border: 1px solid $lightgray;
+        padding: .5em 1em;
+        height: 10em;
+        font-size: .6em;
+      }
+    }
+  }
+}
+
+//------------------------ Style-With ------------------------//
+#style-with {
+  .product-item {
+    .image-wrapper {
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .favourite-icon {
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: .5em .5em .3em .5em;
+        border: 1px solid $lightgray;
+        border-radius: 90%;
+        background: $white;
+        i {
+          font-size: 1.3em;
+          color: $red;
+        }
+      }
+    }
+    .product-info {
+      padding: 1em 0;
+      text-align: center;
     }
   }
 }
