@@ -60,41 +60,135 @@
 <section id="shopping-bag" class="container-fluid clearfix">
   <div class="row wrapper">
     <h2 class="title">Shopping Bag</h2>
-    <div class="col-md-8 item-wrapper">
-      <div class="row item-info">
+    <div class="col-md-8">
+      <div class="row item-wrapper">
         <div class="col-md-3 item-image">
-          <img src="http://lp2.hm.com/hmprod%3Fset%3Dsource%5B%2Fmodel%2F2017%2FF00+0527197+001+55+0719.jpg%5D%2Ctype%5BSTILLLIFE_FRONT%5D%26hmver%3D1%26call%3Durl%5Bfile%3A%2Fproduct%2Fcart%5D" alt="item-image">
+          <a href="#">
+            <img src="http://lp2.hm.com/hmprod%3Fset%3Dsource%5B%2Fmodel%2F2017%2FF00+0527197+001+55+0719.jpg%5D%2Ctype%5BSTILLLIFE_FRONT%5D%26hmver%3D1%26call%3Durl%5Bfile%3A%2Fproduct%2Fcart%5D" alt="item-image">
+          </a>
         </div>
         <div class="col-md-9 item-detail">
           <div  class="item-title">
             <p>
               Jersey leggings
+              <span>Total:  ¥79.90</span>
               <br>
               ¥69.90
             </p>
-            <span>item-total</span>
           </div>
-
 
           <dl class="item-list">
             <dt>Art no:</dt>
-            <dd> 0480576010</dd>
-            <dt>Art no:</dt>
-            <dd> 0480576010</dd>
-            <dt>Art no:</dt>
-            <dd> 0480576010</dd>
+            <dd>0555211001</dd>
+            <dt>Colour:</dt>
+            <dd>Beige/Striped</dd>
+            <dt>Size:</dt>
+            <dd> L (175|104A)</dd>
           </dl>
 
           <div class="button-wrapper">
-            <button type="button" name="delete">delete</button>
-            <button type="button" name="fa">fa</button>
-            <button type="button" name="quantity">quantity</button>
+            <button type="button" name="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button type="button" name="fa"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+            <button type="button" name="quantity"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row item-wrapper">
+        <div class="col-md-3 item-image">
+          <a href="#">
+            <img src="http://lp2.hm.com/hmprod%3Fset%3Dsource%5B%2Fmodel%2F2017%2FF00+0527197+001+55+0719.jpg%5D%2Ctype%5BSTILLLIFE_FRONT%5D%26hmver%3D1%26call%3Durl%5Bfile%3A%2Fproduct%2Fcart%5D" alt="item-image">
+          </a>
+        </div>
+        <div class="col-md-9 item-detail">
+          <div  class="item-title">
+            <p>
+              Jersey leggings
+              <span>Total:  ¥79.90</span>
+              <br>
+              ¥69.90
+            </p>
+          </div>
+
+          <dl class="item-list">
+            <dt>Art no:</dt>
+            <dd>0555211001</dd>
+            <dt>Colour:</dt>
+            <dd>Beige/Striped</dd>
+            <dt>Size:</dt>
+            <dd> L (175|104A)</dd>
+          </dl>
+
+          <div class="button-wrapper">
+            <button type="button" name="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button type="button" name="fa"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+            <button type="button" name="quantity"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="row item-wrapper">
+        <div class="col-md-3 item-image">
+          <a href="#">
+            <img src="http://lp2.hm.com/hmprod%3Fset%3Dsource%5B%2Fmodel%2F2017%2FF00+0527197+001+55+0719.jpg%5D%2Ctype%5BSTILLLIFE_FRONT%5D%26hmver%3D1%26call%3Durl%5Bfile%3A%2Fproduct%2Fcart%5D" alt="item-image">
+          </a>
+        </div>
+        <div class="col-md-9 item-detail">
+          <div  class="item-title">
+            <p>
+              Jersey leggings
+              <span>Total:  ¥79.90</span>
+              <br>
+              ¥69.90
+            </p>
+          </div>
+
+          <dl class="item-list">
+            <dt>Art no:</dt>
+            <dd>0555211001</dd>
+            <dt>Colour:</dt>
+            <dd>Beige/Striped</dd>
+            <dt>Size:</dt>
+            <dd> L (175|104A)</dd>
+          </dl>
+
+          <div class="button-wrapper">
+            <button type="button" name="delete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <button type="button" name="fa"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+            <button type="button" name="quantity"><i class="fa fa-heart" aria-hidden="true"></i></button>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-4 checkout-wrapper">
-      checkout-wrapper
+
+    <div class="col-md-4">
+      <div id="checkout-wrapper">
+        <h3 class="title">SHOPPING BAG TOTAL</h3>
+        <div class="total-info">
+          <dl class="total-price">
+            <dt>ORDER VALUE:</dt>
+            <dd>¥1,226.90</dd>
+            <dt>DELIVERY:</dt>
+            <dd>¥10.00</dd>
+            <hr>
+            <dt>TOTAL:</dt>
+            <dd>¥1,236.90</dd>
+          </dl>
+
+          <%= link_to("Proceed to chekout", checkout_carts_path, method: :post, class: "btn chekout-button") %>
+
+          <p>Prices and delivery costs are not confirmed until you've reached the checkout.</p>
+
+          <p>30 days withdrawal. Read more about  <a href="#">return and refund policy</a>.</p>
+        </div>
+      </div>
+
+      <div id="more-info">
+          <h5 class="title">FREE SHIPPING OVER ¥299</h5>
+          <p>Use code 5000 when placing your order to redeem the discount.</p>
+          <br>
+          <h5 class="title">RETURN AND REFUND</h5>
+          <p>You will need to arrange the return shipment to us yourself and bear the cost for the courier. Find out more about returns and refunds here. You will not get a fa piao unless you request it. Find out more about fa piao here.</p>
+      </div>
     </div>
   </div>
 </section>

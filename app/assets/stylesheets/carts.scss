@@ -39,29 +39,108 @@ html, body {
     text-align: center;
     font-weight: 700;
   }
-  /* item-info */
-  .item-info {
-    background: green;
-  }
   /* item-wrapper */
   .item-wrapper {
-    background: lightblue;
     border: 1px solid $lightgray;
-    padding: 1em;
-    img {
-      width: 100%;
-    }
+    padding:1em .5em;
+    margin-top: 1.2em;
     .item-image{
-      background: lightgray;
+      img {
+        width: 100%;
+      }
     }
     .item-detail{
+      .item-title {
+          font-size: 1em;
+        span {
+          float: right;
+          font-weight: 600;
+          margin-right: 2em;
+        }
+      }
+      .item-list {
+        color:$secondary;
+        font-size: .6em;
+        padding-bottom: 4em;
+        dt {
+          float:left;
+          width: 25%;
+        }
+      }
     }
-    .item-total{
-      background:lightgreen;
+    .button-wrapper{
+      button {
+        width: 23%;
+        padding:.4em;
+        margin-right: .5em;
+        background: $white;
+        border: 1px solid $lightgray;
+        &:hover {
+          border: 1px solid $secondary;
+        }
+        i {
+          font-size: 1.3em;
+        }
+      }
     }
   }
   /* checkout-wrapper */
-  .checkout-wrapper {
-    background: lightgray;
+  #checkout-wrapper {
+    margin-top: 1.2em;
+    border: 1px solid $lightgray;
+    .title {
+      font-size: 1.3em;
+      font-weight: 700;
+      text-align: center;
+      border-bottom: 1px solid $lightgray;
+      margin: 0;
+      padding:1em 0;
+      background: #F8F8F8;
+    }
+    .total-info {
+      padding:1.5em;
+      font-size: .5em;
+      .total-price {
+        dt {
+          float: left;
+          width:70%;
+        }
+        dd {
+          text-align: right;
+        }
+        hr {
+          margin:1em 0;
+        }
+      }
+      .chekout-button {
+        width: 100%;
+        padding:.5em 0;
+        font-size: 2em;
+        font-weight: 700;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0;
+        color: $white;
+        background: $main;
+        margin-bottom: 1em;
+        &:hover {
+          background: $secondary;
+        }
+      }
+    }
   }
+  /* more-info */
+  #more-info {
+    padding: 1.5em;
+    border: 1px solid $lightgray;
+    font-size: .5em;
+    margin-top: 1.5em;
+    color: $secondary;
+    .title {
+      font-weight: bolder;
+      color: $main;
+    }
+  }
+
 }
