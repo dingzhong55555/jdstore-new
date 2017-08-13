@@ -333,3 +333,39 @@ html, body {
     }
   }
 }
+
+/*------------- Devise-User-Style -------------*/
+#sign-up-wrapper, #log-in-wrapper {
+  padding:10% 0;
+  background: url("https://static.pexels.com/photos/274415/pexels-photo-274415.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .box {
+    width: 30%;
+    margin-left: 5%;
+    border: 1px solid $main;
+    padding: 1.5em;
+    background-color: rgba(250,250,250,0.7);
+    .title {
+      font-size: 2em;
+      margin:0;
+      padding-bottom: .5em;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .button {
+      width: 48%;
+      float: left;
+      color: $white;
+      background: $main;
+      border-radius: 0;
+      border: none;
+      padding:.5em 0;
+      text-transform: uppercase;
+    }
+    .log-in-button, .sign-in-button {
+      float: right;
+    }
+  }
+}

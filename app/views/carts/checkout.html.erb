@@ -1,35 +1,39 @@
-<h3>购物明细</h3>
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>购物明细</th>
-      <th>商品价格</th>
-      <th>商品数量</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @cart_items.each do |cart_item| %>
-    <tr>
-      <td><%= link_to( cart_item.product.title, product_path(cart_item.product) )  %></td>
-      <td><%= cart_item.product.price %></td>
-      <td><%= cart_item.quantity %></td>
-    </tr>
+<section id="order-wrapper">
+  <div class="wrapper">
+    <h3>购物明细</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>购物明细</th>
+          <th>商品价格</th>
+          <th>商品数量</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @cart_items.each do |cart_item| %>
+        <tr>
+          <td><%= link_to( cart_item.product.title, product_path(cart_item.product) )  %></td>
+          <td><%= cart_item.product.price %></td>
+          <td><%= cart_item.quantity %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <p class="pull-right">总计<%= current_cart.total_price %>RMB</p>
+    <br>
+    <hr>
+
+    <%= simple_form_for @order do |f| %>
+    <h3>订购人</h3>
+    <hr>
+    <%= f.input :billing_name %>
+    <%= f.input :billing_address %>
+    <h3>收货人</h3>
+    <hr>
+    <%= f.input :shipping_name %>
+    <%= f.input :shipping_address %>
+    <%= f.submit "生成订单", class: "btn btn-danger btn-lg pull-right" %>
     <% end %>
-  </tbody>
-</table>
-
-<p class="pull-right">总计<%= current_cart.total_price %>RMB</p>
-<br>
-<hr>
-
-<%= simple_form_for @order do |f| %>
-<h3>订购人</h3>
-<hr>
-<%= f.input :billing_name %>
-<%= f.input :billing_address %>
-<h3>收货人</h3>
-<hr>
-<%= f.input :shipping_name %>
-<%= f.input :shipping_address %>
-<%= f.submit "生成订单", class: "btn btn-danger btn-lg pull-right" %>
-<% end %>
+ </div>
+</section>
