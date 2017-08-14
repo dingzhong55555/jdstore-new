@@ -1,4 +1,4 @@
-<!--
+
 <div class="row">
   <div class="col-md-6">
     <% if @product.image.present? %>
@@ -26,7 +26,7 @@
       </div>
   </div>
 </div>
--->
+
 
 
 <!-- ************************* Ladies-Product-Show ************************* -->
@@ -40,13 +40,17 @@
       </div>
 
       <div id="details-image" class="col-md-5">
-        <img src="http://lp2.hm.com/hmprod?set=source[/model/2017/F00%200532098%20003%2055%200507.jpg],type[STILLLIFE_FRONT]&hmver=1&call=url[file:/product/main]" alt="">
+        <% if @product.image.present? %>
+          <%= image_tag(@product.image.medium.url) %>
+        <% else %>
+          <%= image_tag("http://placehold.it/400x400&text=No Pic") %>
+        <% end %>
       </div>
 
       <div id="product-info" class="col-md-6">
         <div class="normal-info">
-          <h3 class="product-title">Dungaree dress</h3>
-          <h3 class="product-price">¥149.00</h3>
+          <h3 class="product-title"><%= @product.title %></h3>
+          <h3 class="product-price">¥<%= @product.price %>.00</h3>
         </div>
 
         <div class="color commen">
@@ -102,7 +106,7 @@
             <li><a href="#">DELIVERY</a></li>
           </ul>
           <div class="info-details">
-            <p>Jersey leggings with an elasticated waist.</p>
+            <p><%= @product.description %></p>
           </div>
         </div>
         </div>
